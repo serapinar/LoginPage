@@ -12,7 +12,7 @@ export default function LoginScreen() {
             .createUserWithEmailAndPassword(email, password)
             .then(userCredentials => {
             const user = userCredentials.user;
-            console.log("USER", user, email);
+            console.log("USER", user.email);
         })
             .catch( (error)=> alert (error.message));
     };
