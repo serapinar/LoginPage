@@ -12,10 +12,10 @@ export default function LoginScreen() {
             </View>
             <View style={styles.buttonContainer}>
                 <TouchableOpacity style={styles.button}>
-                    <Text style={styles.buttonText}>Giriş Yap</Text>
+                    <Text style={styles.buttonText}>LOGIN</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={[styles.button, styles.outlineButton]}>
-                    <Text style={styles.outlineButtonText}>Kayıt Ol</Text>
+                    <Text style={styles.outlineButtonText}>SIGN UP</Text>
                 </TouchableOpacity>
             </View>
         </KeyboardAvoidingView>
