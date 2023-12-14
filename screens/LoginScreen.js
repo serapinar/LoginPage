@@ -17,28 +17,28 @@ export default function LoginScreen() {
             }
 
         });
-    },[]);
+    }, []);
     const handleSignUp = () => {
-    auth
-        .createUserWithEmailAndPassword(email, password)
-        .then(userCredentials => {
-            const user = userCredentials.user;
-            console.log("USER", user.email);
-        })
-        .catch((error) => alert(error.message));
+        auth
+            .createUserWithEmailAndPassword(email, password)
+            .then(userCredentials => {
+                const user = userCredentials.user;
+                console.log("USER", user.email);
+            })
+            .catch((error) => alert(error.message));
 
-};
-const handleLogin = () => {
-    auth
-        .sign(email, password)
-        .then(userCredentials => {
-            const user = userCredentials.user;
-            console.log("USER", user.email);
-        })
-        .catch((error) => alert(error.message));
+    };
+    const handleLogin = () => {
+        auth
+            .signInWithEmailAndPassword (email, password)
+            .then(userCredentials => {
+                const user = userCredentials.user;
+                console.log("USER log in", user.email);
+            })
+            .catch((error) => alert(error.message));
 
-};
-return (<KeyboardAvoidingView style={styles.container} behavior="padding">
+    };
+    return (<KeyboardAvoidingView style={styles.container} behavior="padding">
         <Image
             style={styles.tinyLogo}
             source={{
